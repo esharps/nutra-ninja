@@ -9,7 +9,7 @@ using System.Collections;
 public class FoodDestroyer : MonoBehaviour {
 
 	public float minBoundaryY = -20;
-	public float penalty = 10;
+	public int penalty = 10;
 
 	// Update is called once per frame
 	void Update () {
