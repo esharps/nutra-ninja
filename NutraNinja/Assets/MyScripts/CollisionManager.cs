@@ -22,7 +22,8 @@ public class CollisionManager : MonoBehaviour {
 		objectsSlashed = 0;
 	}
 
-	// Hadnl
+	// Handles player collision with GameObjects
+	// TODO Object is replaced by a "splat" icon and fades out
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "GoodFood") 
