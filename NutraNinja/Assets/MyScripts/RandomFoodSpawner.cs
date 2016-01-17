@@ -25,8 +25,8 @@ public class RandomFoodSpawner : MonoBehaviour {
 	private const float minBoundaryX = 400;
 	private const float maxBoundaryX = 1400;
 
-	private const float maxBoundaryY = 1150;
-	private const float minBoundaryY = -20;
+	private const float maxBoundaryY = 1175;
+	private const float minBoundaryY = -40;
 
 	public static int numFoodSpawned;
 
