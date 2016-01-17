@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using System.Timers;
 
 /// <summary>
 /// Initializes a countdown sequence at the beginning of each level
@@ -14,21 +15,36 @@ public class TimerCountdown : MonoBehaviour {
 	public Text timeText;
 	public Text countdownText; 
 	public static float currentTime;
+	Timer myTimer;
+
 
 	// Use this for initialization
 	void Start () {
+
+		myTimer = new System.Timers.Timer (1000);
+		myTimer.Elapsed += (object sender, ElapsedEventArgs e) => timeInitial--;
+
 	
 		timeText = GetComponent<Text>();
 		countdownText.text = "READY?";
 		StartCoroutine ("StartGame", 5);
 		//InvokeRepeating("CountDown", 1, 0.1f);
-		StartCoroutine("GameTimer", timeInitial);
+		StartCoroutine("GameTimer");
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	/*void Update () {
 	
-	}
+		timeInitial -= Time.deltaTime;
+		currentTime = timeInitial;
+
+		timeText.text = "" + Math.Round(timeInitial, 1);
+
+		if (timeInitial <= 0) {
+			timeInitial = 0.0f;
+
+		}
+	}*/
 
 	/// <summary>
 	/// Want to initiate a countdown sequence to delay food spawn
@@ -59,27 +75,26 @@ public class TimerCountdown : MonoBehaviour {
 
 		while (timeInitial > 0)
 		{
-			timeInitial -= 0.01f;
+			timeInitial -= Time.deltaTime;
+
+			//timeInitial -= 0.01f;
 			currentTime = timeInitial;
-			timeText.text = "" + Math.Round(timeInitial, 1);
-			yield return new WaitForSeconds(0.01f);
+			timeText.text = "" + currentTime;
+			//yield return new WaitForSeconds(0.01f);*/
 		}
 
 		countdownText.text = "GAME OVER!";
 	}
 
 	// Older version of timer from 2.0 build
-	/*void CountDown()
+	void CountDown()
     {
-        timeInitial -= 0.1f;
-        currentTime = timeInitial;
-        timeText.text = "" + Math.Round(timeInitial, 1);
+		myTimer = new System.Timers.Timer (1000);
+		myTimer.Elapsed += (object sender, ElapsedEventArgs e) => timeInitial--;
 
-        if(timeInitial <= 0) {
-            CancelInvoke();
-
-            Debug.Log("Time is Up");
-        }
-    }*/
+		if (timeInitial <= 0)
+			countdownText.text = "GAME OVER";
+       
+    }
 	
 }
