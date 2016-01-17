@@ -588,7 +588,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 888978595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c74d2af5f4f7445ad835d8bfaab4f90a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4961844329baf4ac8ae94f867b2c8a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &888978602
@@ -1268,7 +1268,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042649886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
@@ -1385,7 +1385,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2096214700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
