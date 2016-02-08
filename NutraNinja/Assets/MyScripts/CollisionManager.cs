@@ -13,7 +13,16 @@ public class CollisionManager : MonoBehaviour {
 	public int goodFoodScoreScheme = 10;
 	public int badFoodScoreScheme = -10;
     private Vector2 lastPosition;
+
     public GameObject splashIcon;
+
+
+    public GameObject splatIconSushi;
+    public GameObject splatIconDarkGreen;
+    public GameObject splatIconOrange;
+    public GameObject splatIconWhite;
+    public GameObject splatIconRed;
+    public GameObject splatIconYellow;
 
 	// Keep track of number of objects player has slashed
 	// Accessible to other classes
@@ -37,8 +46,7 @@ public class CollisionManager : MonoBehaviour {
 			Destroy(col.gameObject);
             GameObject splat = Instantiate(splashIcon, lastPosition, Quaternion.identity) as GameObject;
 
-           // StartCoroutine(fadeOut(0.2f));
-            //Destroy(splat);
+         
 
 		}
 		if (col.gameObject.tag == "BadFood")

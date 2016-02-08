@@ -170,14 +170,31 @@ public class NinjaBodyMaskManager : MonoBehaviour {
 										displayPixels[displayIndex + 2] = 0xe5; // RED colorFrameData[colorIndex + 2];
 										displayPixels[displayIndex + 3] = 0x80; // ALPHA
 
+                                        //Left-side
+                                        if(bodyIndexFrameData[depthIndex - 1] == 0xff) {
+                                            displayPixels[displayIndex - 1] = colorFrameData[colorIndex];
+										    displayPixels[displayIndex - 2] = colorFrameData[colorIndex + 1];
+										    displayPixels[displayIndex - 3] = colorFrameData[colorIndex + 2];
+										    displayPixels[displayIndex - 4] = 0xff;
+                                        }
+                                        //Right-side
+                                        if(bodyIndexFrameData[depthIndex + 1] == 0xff) {
+                                            displayPixels[displayIndex + 1] = colorFrameData[colorIndex];
+										    displayPixels[displayIndex + 2] = colorFrameData[colorIndex + 1];
+										    displayPixels[displayIndex + 3] = colorFrameData[colorIndex + 2];
+										    displayPixels[displayIndex + 4] = 0xff;
+                                        }
+
 										/** Enable this code to display color video image of player **/
 										//displayPixels[displayIndex + 0] = colorFrameData[colorIndex];
 										//displayPixels[displayIndex + 1] = colorFrameData[colorIndex + 1];
 										//displayPixels[displayIndex + 2] = colorFrameData[colorIndex + 2];
 										//displayPixels[displayIndex + 3] = 0xff;
 									}
-								}
-							}
+								} //End of rendering player pixel
+
+                                
+							 }        
 						} // End of for-loops
 
 

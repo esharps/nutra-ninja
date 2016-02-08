@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 459622}
   - 212: {fileID: 21226226}
+  - 114: {fileID: 11489264}
   m_Layer: 0
   m_Name: splat_red
   m_TagString: Untagged
@@ -28,6 +29,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11489264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f3ad19298f13d4ebc045d7baebf8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21226226
 SpriteRenderer:
   m_ObjectHideFlags: 1

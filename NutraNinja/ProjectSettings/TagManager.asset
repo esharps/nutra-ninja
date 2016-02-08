@@ -8,6 +8,8 @@ TagManager:
   - BadFood
   - RightHand
   - LeftHand
+  - RightFoot
+  - LeftFoot
   layers:
   - Default
   - TransparentFX

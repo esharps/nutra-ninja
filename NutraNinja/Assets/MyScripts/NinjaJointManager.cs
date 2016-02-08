@@ -151,12 +151,12 @@ public class NinjaJointManager : MonoBehaviour {
 									ColorSpacePoint colorPoint = mySensor.CoordinateMapper.MapCameraPointToColorSpace(jointPosition);
 
 									// Update x,y coordinates for Joints in which we are interested 
-									if (joint.JointType.Equals(JointType.WristRight))
+									if (joint.JointType.Equals(JointType.HandTipRight))
 									{
 										wristRightX = colorPoint.X;
 										wristRightY = colorPoint.Y;
 									}
-									if (joint.JointType.Equals(JointType.WristLeft))
+									if (joint.JointType.Equals(JointType.HandTipLeft))
 									{
 										wristLeftX = colorPoint.X;
 										wristLeftY = colorPoint.Y;

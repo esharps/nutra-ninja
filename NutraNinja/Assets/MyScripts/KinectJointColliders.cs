@@ -18,6 +18,8 @@ public class KinectJointColliders : MonoBehaviour {
 
 	private int rightHand = -1;
 	private int leftHand = -1;
+    private int rightFoot = -1;
+    private int leftFoot = -1;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +34,15 @@ public class KinectJointColliders : MonoBehaviour {
 			rightHand = 0;
 			leftHand = 1;
 		}
+        if(gameObject.tag.Equals("RightFoot"))
+        {
+            rightFoot = 1;
+        }
+        if(gameObject.tag.Equals("LeftFoot"))
+        {
+            leftFoot = 1;
+        }
+
 	}
 	
 	// Update is called once per frame
@@ -49,6 +60,18 @@ public class KinectJointColliders : MonoBehaviour {
 			newPos = new Vector2(NinjaJointManager.wristLeftX, unityWristLeftY);
 			transform.position = newPos;
 		}
+        if(rightFoot == 1)
+        {
+            float unityFootLeftY = ConvertKinectYToUnityY(NinjaJointManager.ankleLeftY);
+            newPos = new Vector2(NinjaJointManager.ankleLeftX, unityFootLeftY);
+            transform.position = newPos;
+        }
+        if (rightFoot == 1)
+        {
+            float unityFootRightY = ConvertKinectYToUnityY(NinjaJointManager.ankleRightY);
+            newPos = new Vector2(NinjaJointManager.ankleLeftX, unityFootRightY);
+            transform.position = newPos;
+        }
 	}
 
 	/// <summary>
