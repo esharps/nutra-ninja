@@ -45,30 +45,16 @@ public class NinjaJointManager : MonoBehaviour {
 	StreamWriter sw_cm_y;
 	StreamWriter sw_t;
 
-	public static float wristRightX;
-	public static float wristRightY;
+	public static float wristRightX, wristRightY;
+	public static float wristLeftX, wristLeftY;
+	public static float handRightX, handRightY;
+	public static float handLeftX, handLeftY;
+	public static float ankleRightX, ankleRightY;
+    public static float ankleLeftX, ankleLeftY;
+    public static float headX, headY;
 
-	public static float wristLeftX;
-	public static float wristLeftY;
-
-	public static float handRightX;
-	public static float handRightY;
-
-	public static float handLeftX;
-	public static float handLeftY;
-
-	public static float ankleRightX;
-	public static float ankleRightY;
-
-	public static float ankleLeftX;
-	public static float ankleLeftY;
-
-	public static float headX;
-	public static float headY;
-
-	public static float spineMidX;
-	public static float spineMidY;
-
+    // Used for tracking player CM
+	public static float spineMidX, spineMidY;
 
 	// Use this for initialization
 	void Start () {
@@ -105,7 +91,7 @@ public class NinjaJointManager : MonoBehaviour {
 			float foregroundOfsY = (cameraRect.height - rectHeight) / 2;
 			foregroundImgRect = new Rect(foregroundOfsX, foregroundOfsY, rectWidth, rectHeight);
 			foregroundGuiRect = new Rect(foregroundOfsX, cameraRect.height - foregroundOfsY, rectWidth, -rectHeight);
-			//UNNECESSARY?
+			//UNNECESSARY for Joint management?
 		}
 	}
 	
