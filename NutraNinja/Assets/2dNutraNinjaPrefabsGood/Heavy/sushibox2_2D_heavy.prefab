@@ -14,7 +14,7 @@ GameObject:
   - 60: {fileID: 6073538}
   m_Layer: 0
   m_Name: sushibox2_2D_heavy
-  m_TagString: GoodFood
+  m_TagString: SplatWhite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: GoodFood
+      value: SplatWhite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

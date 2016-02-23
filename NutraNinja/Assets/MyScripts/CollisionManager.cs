@@ -16,13 +16,13 @@ public class CollisionManager : MonoBehaviour {
 
     public GameObject splashIcon;
 
-
     public GameObject splatIconSushi;
     public GameObject splatIconDarkGreen;
     public GameObject splatIconOrange;
     public GameObject splatIconWhite;
     public GameObject splatIconRed;
     public GameObject splatIconYellow;
+    public GameObject splatIconLime;
 
 	// Keep track of number of objects player has slashed
 	// Accessible to other classes
@@ -37,23 +37,59 @@ public class CollisionManager : MonoBehaviour {
 	// TODO Object is replaced by a "splat" icon and fades out
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "GoodFood") 
-		{
+        // In DODGE gameplay mode
+        if (col.gameObject.tag == "BadFood")
+        {
+            ScoreManager.currentScore += badFoodScoreScheme;
+            Destroy(col.gameObject);
+
+            //TODO Instantiate X symbol
+        }
+        // In SLASH gameplay mode
+        else {
+
             lastPosition = transform.position;
-			objectsSlashed += 1;
-			ScoreManager.currentScore += goodFoodScoreScheme;
-            
-			Destroy(col.gameObject);
-            GameObject splat = Instantiate(splashIcon, lastPosition, Quaternion.identity) as GameObject;
+            objectsSlashed += 1;
+            ScoreManager.currentScore += goodFoodScoreScheme;
 
-         
-
-		}
-		if (col.gameObject.tag == "BadFood")
-		{
-			ScoreManager.currentScore += badFoodScoreScheme;
-			Destroy(col.gameObject);
-		}
+            if (col.gameObject.tag == "SplatDarkGreen")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconDarkGreen, lastPosition, Quaternion.identity) as GameObject;
+            }
+            if (col.gameObject.tag == "SplatLime")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconLime, lastPosition, Quaternion.identity) as GameObject;
+            }
+            if(col.gameObject.tag == "SplatOrange")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconOrange, lastPosition, Quaternion.identity) as GameObject;
+            }
+            if (col.gameObject.tag == "SplatRed")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconRed, lastPosition, Quaternion.identity) as GameObject;
+            }
+            if (col.gameObject.tag == "SplatWhite")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconWhite, lastPosition, Quaternion.identity) as GameObject;
+            }
+            if (col.gameObject.tag == "SplatSushi")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconSushi, lastPosition, Quaternion.identity) as GameObject;
+            }
+            if (col.gameObject.tag == "SplatYellow")
+            {
+                Destroy(col.gameObject);
+                GameObject splat = Instantiate(splatIconOrange, lastPosition, Quaternion.identity) as GameObject;
+            }
+        }
+	
+		
 	}
 
     IEnumerator fadeOut(float s)

@@ -14,7 +14,7 @@ GameObject:
   - 60: {fileID: 6038826}
   m_Layer: 0
   m_Name: pepper_2D_heavy
-  m_TagString: GoodFood
+  m_TagString: SplatOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,7 +311,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: GoodFood
+      value: SplatOrange
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

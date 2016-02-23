@@ -408,7 +408,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Ready?
 --- !u!222 &571069095
@@ -487,7 +487,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 825952901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: -1}
+  m_LocalPosition: {x: 829, y: 547, z: -1}
   m_LocalScale: {x: 92, y: 98, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1184,10 +1184,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 2042649887}
   - 212: {fileID: 2042649892}
+  - 114: {fileID: 2042649891}
   - 50: {fileID: 2042649890}
   - 58: {fileID: 2042649889}
   - 114: {fileID: 2042649888}
-  - 114: {fileID: 2042649891}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: RightHand
@@ -1262,14 +1262,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodFoodScoreScheme: 10
   badFoodScoreScheme: -10
-  splashIcon: {fileID: 196616, guid: 40f635eca70e93e4c9268e42340df4b6, type: 2}
-  splatIconSushi: {fileID: 144948, guid: 607d12b45c5a1a042a4a3bcfe0f0539a, type: 2}
-  splatIconDarkGreen: {fileID: 194550, guid: 6abcf763c9fbe3440ab7863e085860bf, type: 2}
-  splatIconOrange: {fileID: 132830, guid: 8970c16b304c1234cad8d287643f8942, type: 2}
-  splatIconWhite: {fileID: 196616, guid: 40f635eca70e93e4c9268e42340df4b6, type: 2}
-  splatIconRed: {fileID: 158774, guid: 6b21cef606cd5f649a1b197569c301ad, type: 2}
-  splatIconYellow: {fileID: 127324, guid: de42c464f99f1264ebadc0d93dc8c404, type: 2}
-  splatIconLime: {fileID: 193086, guid: 72a431c7d3171114a8bd2c34d2e483b4, type: 2}
+  splashIcon: {fileID: 0}
+  splatIconSushi: {fileID: 0}
+  splatIconDarkGreen: {fileID: 0}
+  splatIconOrange: {fileID: 0}
+  splatIconWhite: {fileID: 0}
+  splatIconRed: {fileID: 0}
+  splatIconYellow: {fileID: 0}
 --- !u!212 &2042649892
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1309,10 +1308,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 2096214701}
   - 212: {fileID: 2096214706}
+  - 114: {fileID: 2096214705}
   - 50: {fileID: 2096214704}
   - 58: {fileID: 2096214703}
   - 114: {fileID: 2096214702}
-  - 114: {fileID: 2096214705}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: LeftHand
@@ -1387,14 +1386,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goodFoodScoreScheme: 10
   badFoodScoreScheme: -10
-  splashIcon: {fileID: 196616, guid: 40f635eca70e93e4c9268e42340df4b6, type: 2}
-  splatIconSushi: {fileID: 144948, guid: 607d12b45c5a1a042a4a3bcfe0f0539a, type: 2}
-  splatIconDarkGreen: {fileID: 194550, guid: 6abcf763c9fbe3440ab7863e085860bf, type: 2}
-  splatIconOrange: {fileID: 132830, guid: 8970c16b304c1234cad8d287643f8942, type: 2}
-  splatIconWhite: {fileID: 196616, guid: 40f635eca70e93e4c9268e42340df4b6, type: 2}
-  splatIconRed: {fileID: 158774, guid: 6b21cef606cd5f649a1b197569c301ad, type: 2}
-  splatIconYellow: {fileID: 127324, guid: de42c464f99f1264ebadc0d93dc8c404, type: 2}
-  splatIconLime: {fileID: 0}
+  splashIcon: {fileID: 0}
+  splatIconSushi: {fileID: 0}
+  splatIconDarkGreen: {fileID: 0}
+  splatIconOrange: {fileID: 0}
+  splatIconWhite: {fileID: 0}
+  splatIconRed: {fileID: 0}
+  splatIconYellow: {fileID: 0}
 --- !u!212 &2096214706
 SpriteRenderer:
   m_ObjectHideFlags: 0

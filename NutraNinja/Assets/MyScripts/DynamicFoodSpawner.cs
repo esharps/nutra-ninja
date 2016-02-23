@@ -139,7 +139,6 @@ public class DynamicFoodSpawner : MonoBehaviour {
 			}
 		}
 
-       /*
 		if (frameOffset > 0)
         {
             cmQueue_X.Enqueue(NinjaJointManager.spineMidX);
@@ -164,7 +163,7 @@ public class DynamicFoodSpawner : MonoBehaviour {
             cmQueue_Y.Clear();
 
             testSum = 0;
-        }*/
+        }
 	}
 
 	/// <summary>
